@@ -1,11 +1,10 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import { AlertTriangle, Home } from 'lucide-react';
+import { Construction, Home } from 'lucide-react';
 
-const NotFoundPage = () => {
+const ComingSoonPage = () => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -17,14 +16,15 @@ const NotFoundPage = () => {
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
         transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.2 }}
-        className="p-6 bg-destructive/10 rounded-full mb-8"
+        className="p-6 bg-primary/10 rounded-full mb-8"
       >
-        <AlertTriangle className="h-24 w-24 text-destructive" />
+        <Construction className="h-24 w-24 text-primary" />
       </motion.div>
-      <h1 className="text-6xl font-extrabold text-foreground mb-4">404</h1>
-      <h2 className="text-3xl font-semibold text-foreground mb-6">Oops! Page Not Found</h2>
+      <h1 className="text-6xl font-extrabold text-foreground mb-4">Coming Soon</h1>
+      <h2 className="text-3xl font-semibold text-foreground mb-6">We're Building Something Awesome!</h2>
       <p className="text-lg text-muted-foreground max-w-md mb-10">
-        The page you're looking for doesn't exist or has been moved. Let's get you back on track.
+        This feature is currently under construction. We're working hard to bring you an amazing experience. 
+        Stay tuned for updates!
       </p>
       <Button size="lg" asChild className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg">
         <Link to="/">
@@ -36,5 +36,4 @@ const NotFoundPage = () => {
   );
 };
 
-export default NotFoundPage;
-  
+export default ComingSoonPage;
